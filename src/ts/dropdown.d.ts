@@ -3,4 +3,5 @@ export interface IDropdownProps {
 	selectedValue: string;
 	list: string[];
 	handleInputChange: (value: string) => void;
+	isDisabled?: boolean;
 }

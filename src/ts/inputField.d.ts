@@ -3,5 +3,5 @@ export interface IInputFieldProps {
 	value: string | number;
 	handleInputChange: (value: string | number | boolean) => void;
 	placeholder?: string;
-	disabled?: boolean;
+	isDisabled?: boolean;
 }
