@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MIDDLEWARE } from "@/constant/index"; 
+import { EXCHANGERATE_API_KEY, MIDDLEWARE } from "@/constant/index";
 
 // Create and configure Axios instance
 const createAxiosInstance = (baseURL: string | undefined) => {
@@ -9,7 +9,9 @@ const createAxiosInstance = (baseURL: string | undefined) => {
 	return instance;
 };
 
-const axiosInstance = createAxiosInstance(MIDDLEWARE);
+const axiosInstance = createAxiosInstance(
+	`${MIDDLEWARE}${EXCHANGERATE_API_KEY}`
+);
 
 interface ApiResponse {
 	success: boolean;
@@ -19,7 +21,11 @@ interface ApiResponse {
 
 // Define ApiCalls object with the get method
 const ApiCalls = {
-	get: function (url: string, params: object = {}, onFinish: (response: ApiResponse) => void) {
+	get: function (
+		url: string,
+		params: object = {},
+		onFinish: (response: ApiResponse) => void
+	) {
 		axiosInstance
 			.get(url, { params }) // Pass params as part of the options object
 			.then((response) => {

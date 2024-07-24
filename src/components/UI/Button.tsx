@@ -17,10 +17,10 @@ const Button: React.FC<IButtonProps> = (props) => {
 				className={`flex justify-center text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ${updatedStyle}`}
 				onClick={handleButtonClick}
 				disabled={isLoading || isDisabled}>
-				{isLoading ? <Loader size={5} /> : text}
+				{isLoading ? <Loader size={4} /> : text}
 			</button>
 		);
-	}, [text]);
+	}, [text, handleButtonClick]);
 
 	return RenderButton;
 };

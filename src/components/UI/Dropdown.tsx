@@ -42,7 +42,7 @@ const Dropdown: React.FC<IDropdownProps> = (props) => {
 			data === selectedValue
 				? "bg-gray-100 dark:bg-gray-600"
 				: "hover:bg-gray-100 dark:hover:bg-gray-600"
-		} dark:text-white`;
+		} dark:text-white border-b border-gray-500`;
 	};
 
 	const RenderDropdownButton = useMemo(() => {
@@ -54,7 +54,7 @@ const Dropdown: React.FC<IDropdownProps> = (props) => {
 			<button
 				id='dropdownDefaultButton'
 				onClick={toggleDropdown}
-				className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-[180px] h-[44px] ${updatedStyle}`}
+				className={`flex justify-between text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-[100px] h-[44px] ${updatedStyle}`}
 				type='button'
 				disabled={isDisabled}>
 				{updatedLabel}
@@ -83,7 +83,7 @@ const Dropdown: React.FC<IDropdownProps> = (props) => {
 			<div
 				ref={dropdownRef}
 				id='dropdown'
-				className='absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700'>
+				className='absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-100 dark:bg-gray-700 h-[280px] overflow-scroll'>
 				<ul
 					className='py-2 text-sm text-gray-700 dark:text-gray-200'
 					aria-labelledby='dropdownDefaultButton'>
