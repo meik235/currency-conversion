@@ -9,16 +9,16 @@ import {
 	LABEL,
 	PLACEHOLDER_TEXT,
 } from "@/constant/index";
-import Calander from "../uis/Calander";
-import InputField from "../uis/InputField";
-import Dropdown from "../uis/Dropdown";
-import Button from "../uis/Button";
+import Calander from "../ui/Calander";
+import InputField from "../ui/InputField";
+import Dropdown from "../ui/Dropdown";
+import Button from "../ui/Button";
 import { CurrencyDataType, IConverterProps } from "@/ts/converter";
-import Heading from "../uis/Heading";
+import Heading from "../ui/Heading";
 import ApiCalls from "@/network/apiCalls";
 import ApiUrls from "@/network/apiUrls";
 import { isDateInRange } from "@/utils/index";
-import InfoMessage from "../uis/InfoMessage";
+import InfoMessage from "../ui/InfoMessage";
 
 const initialCurrencyData: CurrencyDataType = {
 	primaryCurrency: 0,
