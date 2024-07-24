@@ -18,6 +18,7 @@ import Heading from "../ui/Heading";
 import ApiCalls from "@/network/apiCalls";
 import ApiUrls from "@/network/apiUrls";
 import { isDateInRange } from "@/utils/index";
+import InfoMessage from "../UI/InfoMessage";
 
 const initialCurrencyData: CurrencyDataType = {
 	primaryCurrency: 0,
@@ -31,7 +32,7 @@ const Converter: React.FC<IConverterProps> = ({ countryCodeArray }) => {
 	const { CURRENCY_CONVERTOR } = LABEL;
 	const { ENTER_CURRENCY } = PLACEHOLDER_TEXT;
 	const { CONVERT } = BUTTON_TEXT;
-	const { SORRY_SOMETHING_WENT_WORNG } = ERROR_MESSAGE;
+	const { SORRY_SOMETHING_WENT_WORNG, INFO_PRO_PLAN } = ERROR_MESSAGE;
 	const {
 		PRIMARY_CURRENCY_KEY,
 		SECONDARY_CURRENCY_KEY,
@@ -173,8 +174,9 @@ const Converter: React.FC<IConverterProps> = ({ countryCodeArray }) => {
 					handleDateChange={(value) =>
 						handleInputChange(SELECTED_DATE_KEY, value)
 					}
-					isDisabled={loading}
+					isDisabled={true}
 				/>
+				<InfoMessage message={INFO_PRO_PLAN} />
 				<div className='flex flex-row items-center'>
 					<InputField
 						value={primaryCurrency}
