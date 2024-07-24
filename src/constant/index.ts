@@ -66,4 +66,6 @@ export const COUNTRY_CODE_ARRAY: string[] = [
 
 export const ERROR_MESSAGE = {
 	SORRY_SOMETHING_WENT_WORNG: "Sorry! Something went worng. :(",
+	INFO_PRO_PLAN:
+		"You can't use the date feature because a Pro plan is required to get the information.",
 };
