@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+	output: "export",
 	env: {
 		ENVIRONMENT: "Production",
 		BASE_API_URL: "https://v6.exchangerate-api.com/v6/",
