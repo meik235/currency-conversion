@@ -18,7 +18,7 @@ import Heading from "../ui/Heading";
 import ApiCalls from "@/network/apiCalls";
 import ApiUrls from "@/network/apiUrls";
 import { isDateInRange } from "@/utils/index";
-import InfoMessage from "../UI/InfoMessage";
+import InfoMessage from "../ui/InfoMessage";
 
 const initialCurrencyData: CurrencyDataType = {
 	primaryCurrency: 0,
