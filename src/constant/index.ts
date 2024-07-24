@@ -3,7 +3,7 @@ export const ENVIRONMENT = process.env.ENVIRONMENT;
 export const EXCHANGERATE_API_KEY = process.env.EXCHANGERATE_API_KEY;
 
 export const LABEL = {
-	CURRENCY_CONVERTOR: "Currency Convertor",
+	CURRENCY_CONVERTOR: "Currency Converter",
 };
 
 export const PLACEHOLDER_TEXT = {
